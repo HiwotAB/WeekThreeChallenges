@@ -17,11 +17,11 @@ public class Resume {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @NotNull
-    @NotEmpty
+
     @Size(min=2)
     private String firstname;
     @NotNull
-    @NotEmpty
+
     @Size(min=2)
     private String lastname;
     @NotNull

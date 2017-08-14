@@ -15,14 +15,14 @@ public class EduAchievements {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @NotNull
-    @NotEmpty
+
     @Size(min=4)
     private String eduType;
     @NotNull
-    @NotEmpty
+
     @Size(min=4)
     private String uniName;
-
+    @NotNull
     private int grdYear;
     public String getEduType() {return eduType;   }
 

@@ -17,11 +17,11 @@ public class Skills {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @NotNull
-    @NotEmpty
+
     @Size(min=1)
     private String skill;
     @NotNull
-    @NotEmpty
+
     @Size(min=2)
     private String rate;
     public String getSkill() {

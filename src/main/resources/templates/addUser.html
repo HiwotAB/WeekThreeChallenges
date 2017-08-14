@@ -48,7 +48,7 @@
                                         <legend align="Center">Enter Your Information</legend>
 
                                         <!-- Text input-->
-                                        <span  th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}" class="well alert alert-danger" role="alert">You Must enter a valid Name!</span>
+                                        <div  th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}" class="well alert alert-danger" role="alert">You Must enter a valid Name!</div>
                                         <div class="form-group">
                                             <label class="col-md-4 control-label">First Name</label>
                                             <div class="col-md-4 inputGroupContainer">
@@ -58,7 +58,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <span  th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}" class="well alert alert-danger" role="alert">You Must enter a valid Name!</span>
+                                        <div  th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}" class="well alert alert-danger" role="alert">You Must enter a valid Name!</div>
                                         <div class="form-group">
                                             <label class="col-md-4 control-label">Last Name</label>
                                             <div class="col-md-4 inputGroupContainer">
@@ -69,7 +69,7 @@
                                             </div>
                                         </div>
                                         <!-- Text input-->
-                                        <span  th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="well alert alert-danger" role="alert">You Must enter a valid E-mail!</span>
+                                        <div  th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="well alert alert-danger" role="alert">You Must enter a valid E-mail!</div>
                                         <div class="form-group">
                                             <label class="col-md-4 control-label">E-Mail</label>
                                             <div class="col-md-4 inputGroupContainer">
@@ -85,7 +85,7 @@
                                             <label class="col-md-4 control-label"></label>
                                             <div class="col-md-4">
                                                 <button type="submit" class="btn btn-success" >Submit<span class="glyphicon glyphicon-save"></span></button>
-                                                <button type="submit" class="btn btn-warning" >Reset<span class="glyphicon glyphicon-remove-circle"></span></button>
+                                                <button type="reset" class="btn btn-warning" >Reset<span class="glyphicon glyphicon-remove-circle"></span></button>
                                             </div>
                                         </div>
 
