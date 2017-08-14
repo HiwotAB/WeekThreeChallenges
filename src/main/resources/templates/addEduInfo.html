@@ -49,7 +49,8 @@
                                         <legend align="Center">Enter Your Education Achievement Information</legend>
 
                                         <!-- Text input-->
-                                        <div  th:if="${#fields.hasErrors('eduType')}" th:text="#{static.exceptiontrapper}" class="well alert alert-danger" role="alert">You Must enter a valid Education Type!</div>
+
+                                        <div  th:if="${#fields.hasErrors('eduType')}" th:errors="*{eduType}" class="well alert alert-danger" role="alert">Please enter a valid Education Information!</div>
                                         <div class="form-group">
                                             <label class="col-md-4 control-label">Education Filed</label>
                                             <div class="col-md-4 inputGroupContainer">
@@ -59,7 +60,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div  th:if="${#fields.hasErrors('uniName')}" th:text="#{static.exceptiontrapper}" class="well alert alert-danger" role="alert">You Must enter a valid Univ/College Name!</div>
+                                        <div  th:if="${#fields.hasErrors('uniName')}" th:errors="*{uniName}" class="well alert alert-danger" role="alert">You Must enter a valid Univ/College Name!</div>
                                         <div class="form-group">
                                             <label class="col-md-4 control-label">Univ/College Name</label>
                                             <div class="col-md-4 inputGroupContainer">
@@ -70,7 +71,7 @@
                                             </div>
                                         </div>
                                         <!-- Text input-->
-                                        <div  th:if="${#fields.hasErrors('grdYear')}" th:text="#{static.exceptiontrapper}" class="well alert alert-danger" role="alert">You Must enter a valid E-mail!</div>
+                                        <div  th:if="${#fields.hasErrors('grdYear')}" th:errors="*{uniName}" class="well alert alert-danger" role="alert">You Must enter a valid E-mail!</div>
                                         <div class="form-group">
                                             <label class="col-md-4 control-label">Year Graduate</label>
                                             <div class="col-md-4 inputGroupContainer">
@@ -85,7 +86,8 @@
                                         <div class="form-group">
                                             <label class="col-md-4 control-label"></label>
                                             <div class="col-md-4">
-                                                <button type="submit" class="btn btn-warning" >Submit<span class="glyphicon glyphicon-save"></span></button>
+                                                <button type="submit" class="btn btn-success" >Submit<span class="glyphicon glyphicon-save"></span></button>
+                                                <button type="submit" class="btn btn-warning" >Reset<span class="glyphicon glyphicon-remove-circle"></span></button>
                                             </div>
                                         </div>
 

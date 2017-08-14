@@ -1,13 +1,13 @@
 package com.hiwotab.roboresumeapplicationprojects.Model;
 
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.data.jpa.repository.Temporal;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 @Entity
 public class WorkExperiences {
@@ -16,17 +16,27 @@ public class WorkExperiences {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @NotNull
+    @NotEmpty
+    @Size(min=4)
     private String orgName;
     @NotNull
+    @NotEmpty
+    @Size(min=2)
     private String profName;
     @NotNull
+    @NotEmpty
+    @Size(min=1)
     private String ProfLevel;
     @NotNull
+    @NotEmpty
+    @Size(min=2)
     private String duty;
     @NotNull
+   // @Temporal(TemporalType.Date)
     @DateTimeFormat(pattern = "MM/dd/YYYY")
     private Date startDate;
     @NotNull
+   // @Temporal(TemporalType.Date)
     @DateTimeFormat(pattern = "MM/dd/YYYY")
     private Date endDate;
 

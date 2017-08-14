@@ -1,5 +1,7 @@
 package com.hiwotab.roboresumeapplicationprojects.Model;
 import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,12 +17,15 @@ public class Resume {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @NotNull
+    @NotEmpty
     @Size(min=2)
     private String firstname;
     @NotNull
+    @NotEmpty
     @Size(min=2)
     private String lastname;
     @NotNull
+    @NotEmpty
     @Email
     private String email;
 

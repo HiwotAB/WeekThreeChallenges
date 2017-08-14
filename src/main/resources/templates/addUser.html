@@ -29,7 +29,6 @@
     <![endif]-->
 
 </head>
-
 <body>
 
 <!-- Header -->
@@ -49,38 +48,34 @@
                                         <legend align="Center">Enter Your Information</legend>
 
                                         <!-- Text input-->
-                                        <!--<span  th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}" class="well alert alert-danger" role="alert">You Must enter a valid Name!</span>-->
-
+                                        <span  th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}" class="well alert alert-danger" role="alert">You Must enter a valid Name!</span>
                                         <div class="form-group">
                                             <label class="col-md-4 control-label">First Name</label>
                                             <div class="col-md-4 inputGroupContainer">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                                     <input  th:field="*{firstname}" name="firstname" placeholder="Enter First Name" class="form-control"  type="text">
-                                                    <span th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}" class="text-warning">You Must enter a valid Name!</span>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!--<span  th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}"  class="well alert alert-danger" role="alert">You Must enter a valid Name!</span>-->
+                                        <span  th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}" class="well alert alert-danger" role="alert">You Must enter a valid Name!</span>
                                         <div class="form-group">
                                             <label class="col-md-4 control-label">Last Name</label>
                                             <div class="col-md-4 inputGroupContainer">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                                     <input  th:field="*{lastname}" name="lastname" placeholder="Enter Last Name" class="form-control"  type="text">
-                                                    <span th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}" class="text-warning">You Must enter a valid Name!</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <!-- Text input-->
-                                        <!--<span  th:if="${#fields.hasErrors('email')}" th:errors="*{email}"  class="well alert alert-danger" role="alert">You Must enter a valid E-mail!</span>-->
+                                        <span  th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="well alert alert-danger" role="alert">You Must enter a valid E-mail!</span>
                                         <div class="form-group">
                                             <label class="col-md-4 control-label">E-Mail</label>
                                             <div class="col-md-4 inputGroupContainer">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
                                                     <input  th:field="*{email}" name="email" placeholder="Enter E-Mail" class="form-control"  type="text">
-                                                    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-warning">You Must enter a valid E-mail!</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -89,7 +84,8 @@
                                         <div class="form-group">
                                             <label class="col-md-4 control-label"></label>
                                             <div class="col-md-4">
-                                                <button type="submit" class="btn btn-warning" >Submit<span class="glyphicon glyphicon-save"></span></button>
+                                                <button type="submit" class="btn btn-success" >Submit<span class="glyphicon glyphicon-save"></span></button>
+                                                <button type="submit" class="btn btn-warning" >Reset<span class="glyphicon glyphicon-remove-circle"></span></button>
                                             </div>
                                         </div>
 
@@ -107,5 +103,4 @@
 </header>
 
 </body>
-
 </html>
